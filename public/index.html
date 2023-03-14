@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="aak-client-translate" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>AAK 翻译</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+      // 保持最大高度（处理安卓软键盘）
+      let height = window.innerHeight;
+      function handleResize() {
+        if (window.innerHeight <= height) {
+          document.querySelector("body").style.height = height + "px";
+        } else {
+          height = window.innerHeight;
+          document.querySelector("body").style.height = height + "px";
+        }
+      }
+      window.addEventListener("resize", handleResize);
+    </script>
+  </body>
+</html>
